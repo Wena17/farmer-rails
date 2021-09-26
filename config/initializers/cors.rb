@@ -7,7 +7,8 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'http://localhost:8000'
+    # TODO Remove origins when javascript is in Rails assets
+    origins 'http://localhost:8000', 'https://wena17.github.io'
 
     resource '*',
       headers: :any,
