@@ -24,6 +24,4 @@ production:
   <<: *default
   adapter: postgresql
   encoding: unicode
-  database: postgresql-rectangular-60673
-  username: guarded-ridge-92696
-  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+  database: <%= ENV['DATABASE_URL'] %>
