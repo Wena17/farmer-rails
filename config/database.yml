@@ -22,4 +22,8 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  database: postgresql-rectangular-60673
+  username: guarded-ridge-92696
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
