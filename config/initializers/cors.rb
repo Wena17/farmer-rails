@@ -5,14 +5,14 @@
 
 # Read more: https://github.com/cyu/rack-cors
 
-Rails.application.config.middleware.insert_before 0, Rack::Cors do
-  allow do
-    # TODO Remove origins when javascript is in Rails assets
-    origins 'http://localhost:8000', 'https://wena17.github.io'
-
-    resource '*',
-      headers: :any,
-      methods: [:get, :post, :put, :patch, :delete, :options, :head],
-      expose: ["Authorization"]
-  end
-end
+# Rails.application.config.middleware.insert_before 0, Rack::Cors do
+#   allow do
+#     # TODO Remove origins when javascript is in Rails assets
+#     origins 'http://localhost:8000', 'https://wena17.github.io'
+#
+#     resource '*',
+#       headers: :any,
+#       methods: [:get, :post, :put, :patch, :delete, :options, :head],
+#       expose: ["Authorization"]
+#   end
+# end
