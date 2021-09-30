@@ -5,7 +5,11 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all
     @products.each do |product|
-      product.imgUrl = url_for(product.main_image)
+      if product.main_image.attached?
+        product.imgUrl = url_for(product.main_image)
+      else
+        product.imgUrl = ""
+      end
     end
     render json: @products
   end
