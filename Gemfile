@@ -35,6 +35,7 @@ end
 
 group :production do
   gem 'pg'
+  gem "aws-sdk-s3", require: false
 end
 
 
